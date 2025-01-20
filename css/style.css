@@ -482,23 +482,23 @@ img {
 }
 
 .col3 .roundal#grooming {
-	background: url("../images/services-grooming.png") 50% 50% no-repeat;
+	background: url("../images/mision.png") 50% 50% no-repeat;
 }
 
 .col3 .roundal#adoption {
-	background: url("../images/services-adoption.png") 50% 50% no-repeat;
+	background: url("../images/vision.png") 50% 50% no-repeat;
 }
 
 .col3 .roundal#walking {
-	background: url("../images/services-walking.png") 50% 50% no-repeat;
+	background: url("../images/estructura.png") 50% 50% no-repeat;
 }
 
 .col3 .roundal#advice {
-	background: url("../images/services-advice.png") 50% 50% no-repeat;
+	background: url("../images/estrategia.png") 50% 50% no-repeat;
 }
 
 .col3 .roundal#play {
-	background: url("../images/services-play.png") 50% 50% no-repeat;
+	background: url("../images/proyecto.png") 50% 50% no-repeat;
 }
 
 .col3 h3 {
@@ -2261,4 +2261,211 @@ code {
 	}
 	
 }
-  
+
+
+
+
+
+	
+	.image-grid-inv {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		justify-content: center; /* Centra el grid horizontalmente */
+		align-items: center; /* Centra el contenido verticalmente */
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+  .image-grid-inv img {
+	  width: 100%; /* Ancho fijo */
+	  height: auto; /* Alto fijo */
+	  object-fit: cover; /* Asegura que las imágenes llenen el espacio */
+	  border-radius: 8px;
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  margin: 0 auto; /* Centra cada imagen en su celda */
+	}
+
+		.image-grid-inv img:hover {
+			transform: scale(1.05);
+			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+		}
+
+
+
+		.image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+          }
+
+          .image-title {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(42, 198, 170, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+          }
+
+          .modal {
+            display: none;
+            position: fixed;
+            top: 13%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 700px; /* Aumenta ligeramente el ancho */
+            width: 90%;
+            max-height: 85%; /* Limita el largo del modal al 90% de la pantalla */
+            overflow-y: auto; /* Agrega scroll si el contenido excede el límite */
+            z-index: 1000;
+          }
+
+          .modal-content {
+            padding: 20px;
+            text-align: center;
+          }
+
+          .modal-content img {
+            max-width: 100%;
+            height: auto; /* Mantiene la proporción */
+            border-bottom: 2px solid #2ac6aa;
+            margin-bottom: 10px;
+          }
+
+          .modal-content p {
+            font-size: 16px;
+            color: #000000;
+          }
+
+          .image-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2ac6aa;
+            margin-bottom: 15px;
+          }
+
+          #modal-close {
+            background-color: #2ac6aa;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px auto;
+            display: block;
+          }
+
+          #modal-close:hover {
+            background-color: #229a87;
+          }
+
+          .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+          }
+
+
+
+
+
+		  /* Contenedor principal */
+		  .species-container {
+			display: flex;
+			justify-content: space-between;
+			gap: 40px;
+			margin: 20px;
+		  }
+		
+		  /* Secciones (Aves y Mamíferos | Reptiles e Insectos) */
+		  .species-section {
+			flex: 1;
+			background-color: #f8f8f8;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		  }
+		
+		  /* Títulos de sección */
+		  .section-title {
+			font-size: 22px;
+			font-weight: bold;
+			color: #2ac6aa;
+			text-align: center;
+			margin-bottom: 20px;
+		  }
+		
+		  /* Encabezados de subsecciones */
+		  .species-heading {
+			font-size: 18px;
+			font-weight: bold;
+			color: #6d6d6d;
+			margin-top: 20px;
+		  }
+		
+		  /* Descripción de especies */
+		  .species-description {
+			font-size: 16px;
+			color: #333;
+			text-align: justify;
+			line-height: 1.6;
+		  }
+		
+		  /* Diseño responsivo */
+		  @media (max-width: 768px) {
+			.species-container {
+			  flex-direction: column;
+			}
+		  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  .highlight {
+			font-weight: bold;
+			color: #8f121a;
+		  }
+	  
+		  .section {
+			background-color: #fff;
+			border-radius: 8px;
+			padding: 20px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			margin-bottom: 30px;
+		  }
+	  
+		  .section p {
+			margin-bottom: 20px;
+		  }
+	  
+		  .section:last-of-type {
+			margin-bottom: 0;
+		  }
