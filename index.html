@@ -527,6 +527,53 @@
             Alberga la colección de Bambusetum Heliconario y los cafetales hasta la colección de Bosque natural. Aporta en los procesos de educación de los agroecosistemas como áreas importantes para la conservación de la biodiversidad desde el punto de vista productivo. Así mismo, resaltando uno de los principales renglones económicos del País y la región. Se trabaja en el componente educativo, sobre las especies asociadas a 
             esta área como aves, plantas no vasculares, líquenes, especies que cumplen funciones de sombrío, estrategias de herramientas de manejo del paisaje con sistemas agroforestales.
           </p>
+
+          <div class="image-grid-edu">
+            <img src="images/educacion/img_edu01.jpg" alt="Imagen 1">
+            <img src="images/educacion/img_edu02.JPG" alt="Imagen 2">
+            <img src="images/educacion/img_edu03.jpg" alt="Imagen 3">
+            <img src="images/educacion/img_edu04.JPG" alt="Imagen 4">
+            <img src="images/educacion/img_edu05.jpg" alt="Imagen 5">
+            <img src="images/educacion/img_edu07.JPG" alt="Imagen 6">
+          </div>
+        
+          <style type="text/css">
+              .image-grid-edu {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-gap: 10px;
+                  justify-content: center; /* Centra el grid horizontalmente */
+                  align-items: center; /* Centra el contenido verticalmente */
+                  width: 90%;
+                  max-width: 1200px;
+                  margin: 0 auto;
+              }
+        
+            .image-grid-edu img {
+                width: 2128px; /* Ancho fijo */
+                height: 322px; /* Alto fijo */
+                object-fit: cover; /* Asegura que las imágenes llenen el espacio */
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                margin: 0 auto; /* Centra cada imagen en su celda */
+              }
+        
+                  .image-grid-edu img:hover {
+                      transform: scale(1.05);
+                      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+                  }
+              </style>
+
+              <script type="text/javascript">
+                // Opcional: Puedes añadir funcionalidades, como cambiar la imagen al hacer clic.
+                document.querySelectorAll('.image-grid-edu img').forEach(img => {
+                    img.addEventListener('click', () => {
+                        alert(`Has hecho clic en la imagen: ${img.alt}`);
+                    });
+                });
+            </script>
+
           <!-- Card que contiene el mapa -->
         </div>
       </div>
@@ -552,19 +599,19 @@
             <img src="images/investigacion/img_inv05.jpg" alt="Imagen 4">
             <img src="images/investigacion/img_inv06.jpg" alt="Imagen 5">
             <img src="images/investigacion/img_inv12.jpg" alt="Imagen 6">
-        </div>
+          </div>
         
-        <style type="text/css">
-            .image-grid-inv {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 10px;
-                justify-content: center; /* Centra el grid horizontalmente */
-                align-items: center; /* Centra el contenido verticalmente */
-                width: 90%;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
+          <style type="text/css">
+              .image-grid-inv {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-gap: 10px;
+                  justify-content: center; /* Centra el grid horizontalmente */
+                  align-items: center; /* Centra el contenido verticalmente */
+                  width: 90%;
+                  max-width: 1200px;
+                  margin: 0 auto;
+              }
         
             .image-grid-inv img {
                 width: 2128px; /* Ancho fijo */
@@ -574,13 +621,13 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 margin: 0 auto; /* Centra cada imagen en su celda */
-            }
+              }
         
-            .image-grid-inv img:hover {
-                transform: scale(1.05);
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-            }
-        </style>
+                  .image-grid-inv img:hover {
+                      transform: scale(1.05);
+                      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+                  }
+              </style>
         
         <script type="text/javascript">
             // Opcional: Puedes añadir funcionalidades, como cambiar la imagen al hacer clic.
@@ -599,18 +646,9 @@
       <div class="row" id="apropiacion">
         <div class="col-md-12 centered pt-2">
           <h3 style="color: #005790;"><span>Apropiación</span></h3>
-          <p style="text-align: justify;">
+          <p>
             Inicia desde la salida del bosque continuando por el camino de la antigua servidumbre, pasando por las zonas productivas y terminando en el área de infraestructura institucional.
           </p>
-          <p style="text-align: justify;">
-            En este espacio encontraremos el camino del Tul como una estrategia ancestral de articulación de los saberes culturales y científicos que propenden por el aprovechamiento 
-            de los recursos naturales desde el respeto de las comunidades hacia la madre tierra, conformando un tejido social más fortalecido. Como parte de esta zona es importante resaltar 
-            una de las características del territorio en la cual la estructura geográfica genera una divisoria de aguas en donde se separan dos vertientes hacia nuestras grandes cuencas 
-            hidrográficas, brindando agua tanto al rio Magdalena de la vertiente del océano Atlántico como al rio Patía hacia la vertiente del océano Pacifico. Alrededor de esta zona se 
-            encuentran procesos productivos agropecuarios sostenibles que dinamizan la economía en los territorios que se convierten en una ventana para mostrar a los visitantes la importancia 
-            de la sostenibilidad en la producción.
-          </p>
-          <!-- Card que contiene el mapa -->
         </div>
       </div>
       
@@ -692,14 +730,28 @@
       </div>
     </div>
     <!-- Carousel end -->
+     
+
     <!-- Rehome -->
     <div class="container">
       <div class="col-md-12 centered">
+        <p style="text-align: justify;">
+          En este espacio encontraremos el camino del Tul como una estrategia ancestral de articulación de los saberes culturales y científicos que propenden por el aprovechamiento 
+            de los recursos naturales desde el respeto de las comunidades hacia la madre tierra, conformando un tejido social más fortalecido. Como parte de esta zona es importante resaltar 
+            una de las características del territorio en la cual la estructura geográfica genera una divisoria de aguas en donde se separan dos vertientes hacia nuestras grandes cuencas 
+            hidrográficas, brindando agua tanto al rio Magdalena de la vertiente del océano Atlántico como al rio Patía hacia la vertiente del océano Pacifico. Alrededor de esta zona se 
+            encuentran procesos productivos agropecuarios sostenibles que dinamizan la economía en los territorios que se convierten en una ventana para mostrar a los visitantes la importancia 
+            de la sostenibilidad en la producción.
+        </p>
+        <!-- Card que contiene el mapa -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-12 centered">
         <h3 style="color: #3071a9;"><span>Herbario</span></h3>
-        <p>
-          humanitatis per seacula quarta decima et quinta decima. Eodem modo
-          typi, qui nunc nobis videntur parum clari, fiant sollemnes in
-          futurum.
+        <p style="text-align: justify;">
+          Un herbario es una colección organizada de especímenes vegetales secos, conservados y etiquetados, utilizados para estudios científicos, educativos y de conservación. Estas colecciones permiten identificar plantas, investigar su distribución y documentar la biodiversidad, siendo recursos clave para la botánica y la ecología.
         </p>
         <!-- Card que contiene el mapa -->
       </div>
@@ -981,8 +1033,8 @@
               <a href="#" class="twitter"></a>
             </p>
             <p class="c-details">
-              <span>Mail</span> <a href="#" title="">info@info.com</a><br />
-              <span>Tel</span> 0203 000 444
+              <span>Mail</span> <a href="#" title="">jardinbotanico@fup.edu.co</a><br />
+              <span>Tel</span> 3146413972
             </p>
           </div>
         </div>
