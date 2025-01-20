@@ -12,7 +12,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    
+
     <link
       href="../../../fonts.googleapis.com/cssa11b.css?family=Lato:300,400,700,900,400italic,700italic,900italic"
       rel="stylesheet"
@@ -89,7 +89,7 @@
             </li>
             <li class="dropdown">
               <a href="" class="dropdown-toggle" data-toggle="dropdown"
-                ><span data-hover="Collecciones vivas">Collecciones vivas</span>
+                ><span data-hover="Colecciones vivas">Collecciones vivas</span>
                 <b class="caret"></b
               ></a>
               <ul class="dropdown-menu dropdown-color">
@@ -478,49 +478,126 @@
               además, de macrohongos con 136 especies y líquenes con 63 especies
               inventariadas.
             </p>
-            <div class="container">
-              <div class="section">
-                <h3 style="color: #8f121a">Jardín Arboretum</h3>
-                <p>
-                  La colección tiene una gran importancia ecológica, económica y ornamental. Con un área de 6695,8 m² y 471 individuos representados en 32 familias, 49 géneros y 55 especies. Entre ellas, destacan las especies nativas, cultivadas e introducidas. El sendero demarcado de 220 metros permite su recorrido.
-                </p>
+            <div class="carousel-container" id="custom-carousel">
+              <button class="carousel-btn prev" id="prev-btn">‹</button>
+              <div class="carousel" id="carousel-inner">
+                <div class="carousel-item">
+                  <h3 style="color: #8f121a">Jardín Arboretum</h3>
+                  <p>
+                    La colección tiene una gran importancia ecológica, económica y ornamental. Con un área de 6695,8 m² y 471 individuos representados en 32 familias, 49 géneros y 55 especies. Entre ellas, destacan las especies nativas, cultivadas e introducidas. El sendero demarcado de 220 metros permite su recorrido.
+                  </p>
+                </div>
+                <div class="carousel-item">
+                  <h3 style="color: #8f121a">Epifitario</h3>
+                  <p>
+                    Esta colección ecológica alberga especies de epífitas vasculares y no vasculares, donadas en 2014 por la Asociación Payanesa de Orquideología – APO. Con 428 individuos distribuidos en 62 morfoespecies y 4 familias, las orquídeas son las más destacadas, con varias especies en peligro.
+                  </p>
+                </div>
+                <div class="carousel-item">
+                  <h3 style="color: #8f121a">Bambusetum</h3>
+                  <p>
+                    Compuesta por dos especies de gran valor económico y ecológico: Guadua (Guadua angustifolia) y Bambú (Bambusa vulgaris), esta colección también es hábitat de quirópteros y protectora de fuentes hídricas. El sendero tiene una longitud de 35 metros.
+                  </p>
+                </div>
+                <div class="carousel-item">
+                  <h3 style="color: #8f121a">Heliconario</h3>
+                  <p>
+                    En este espacio se encuentran especies de Heliconias representativas de la región. El sendero que lo recorre mide 31 metros.
+                  </p>
+                </div>
+                <div class="carousel-item">
+                  <h3 style="color: #8f121a">Bosque Natural</h3>
+                  <p>
+                    Esta área es esencial para las estrategias de conservación in situ del Jardín Botánico, y alberga 57 especies agrupadas en 43 géneros y 32 familias. Se pueden recorrer varios senderos ecológicos que muestran la vegetación, las especies importantes y el paisaje de la zona.
+                  </p>
+                </div>
+                <div class="carousel-item">
+                  <h3 style="color: #8f121a">Fauna</h3>
+                  <p>
+                    El Jardín Botánico de Popayán alberga diversas especies de fauna, tanto vertebrados como invertebrados, que son fundamentales para la dinámica ecológica del ecosistema. Se reportan varias especies asociadas a las colecciones vivas.
+                  </p>
+                </div>
               </div>
-          
-              <div class="section">
-                <h3 style="color: #8f121a">Epifitario</h3>
-                <p>
-                  Esta colección ecológica alberga especies de epífitas vasculares y no vasculares, donadas en 2014 por la Asociación Payanesa de Orquideología – APO. Con 428 individuos distribuidos en 62 morfoespecies y 4 familias, las orquídeas son las más destacadas, con varias especies en peligro.
-                </p>
-              </div>
-          
-              <div class="section">
-                <h3 style="color: #8f121a">Bambusetum</h3>
-                <p>
-                  Compuesta por dos especies de gran valor económico y ecológico: Guadua (Guadua angustifolia) y Bambú (Bambusa vulgaris), esta colección también es hábitat de quirópteros y protectora de fuentes hídricas. El sendero tiene una longitud de 35 metros.
-                </p>
-              </div>
-          
-              <div class="section">
-                <h3 style="color: #8f121a">Heliconario</h3>
-                <p>
-                  En este espacio se encuentran especies de Heliconias representativas de la región. El sendero que lo recorre mide 31 metros.
-                </p>
-              </div>
-          
-              <div class="section">
-                <h3 style="color: #8f121a">Bosque Natural</h3>
-                <p>
-                  Esta área es esencial para las estrategias de conservación in situ del Jardín Botánico, y alberga 57 especies agrupadas en 43 géneros y 32 familias. Se pueden recorrer varios senderos ecológicos que muestran la vegetación, las especies importantes y el paisaje de la zona.
-                </p>
-              </div>
-          
-              <div class="section">
-                <h>Fauna</h>
-                <p>
-                  El Jardín Botánico de Popayán alberga diversas especies de fauna, tanto vertebrados como invertebrados, que son fundamentales para la dinámica ecológica del ecosistema. Se reportan varias especies asociadas a las colecciones vivas.
-                </p>
-              </div>
+              <button class="carousel-btn next" id="next-btn">›</button>
             </div>
+            
+            <style>
+            .carousel-container {
+              position: relative;
+              width: 90%;
+              margin: auto;
+              overflow: hidden;
+              background-color: #f9f9f9;
+              border: 2px solid #8f121a;
+              border-radius: 10px;
+              padding: 10px;
+            }
+            
+            .carousel {
+              display: flex;
+              transition: transform 0.4s ease-in-out;
+              will-change: transform;
+            }
+            
+            .carousel-item {
+              flex: 0 0 100%;
+              text-align: center;
+              padding: 20px;
+              box-sizing: border-box;
+            }
+            
+            .carousel-btn {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: #8f121a;
+              border: none;
+              color: white;
+              font-size: 24px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              cursor: pointer;
+              z-index: 10;
+            }
+            
+            .carousel-btn:hover {
+              background-color: #ce575f;
+            }
+            
+            #prev-btn {
+              left: 10px;
+            }
+            
+            #next-btn {
+              right: 10px;
+            }
+            </style>
+            
+            <script>
+            const carousel = document.getElementById('carousel-inner');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            
+            let currentIndex = 0;
+            
+            function updateCarousel() {
+              const width = carousel.clientWidth;
+              carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+            }
+            
+            prevBtn.addEventListener('click', () => {
+              currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+              updateCarousel();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+              currentIndex = (currentIndex < carousel.children.length - 1) ? currentIndex + 1 : currentIndex;
+              updateCarousel();
+            });
+            
+            window.addEventListener('resize', updateCarousel);
+            </script>
             <p
               style="
                 font-size: 17px;
