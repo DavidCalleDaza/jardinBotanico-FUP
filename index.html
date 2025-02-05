@@ -7,6 +7,7 @@
     <title>Jardín Botánico</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link
       href="../../../fonts.googleapis.com/css6808.css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic"
       rel="stylesheet"
@@ -343,52 +344,151 @@
           </form>
         </div>
       </div>
-      <div class="row" id="ubicacion">
-        <div class="col-md-12 centered pt-2">
-          <h3><span>Ubicación</span></h3>
-          <div class="row d-flex align-items-start">
-            <!-- Columna de descripción -->
-            <div class="col-md-6">
-              <p style="text-align: justify">
-                Se ubica en nuestro Campus <strong>Los Robles</strong>, contando
-                con <b>8 hectáreas</b> de las 46 que posee la Institución y se
-                sitúa en el flanco occidental de la Cordillera Central a
-                <b>1850 m.s.n.m.</b> con una temperatura promedio de
-                <strong>18 °C</strong>.
-              </p>
-              <p style="text-align: justify">
-                El área corresponde a la zona de vida de
-                <strong>Selva Subandina</strong> (Cuatrecasas, 1958), con
-                coordenadas geográficas de <b>2°23’ Latitud norte</b> y
-                <b>76°40’ longitud oeste</b> a una altura de
-                <strong>1850 m.s.n.m.</strong>
-              </p>
-            </div>
-            <!-- Columna del mapa -->
-            <div class="col-md-6">
-              <div
-                class="card"
-                style="
-                  border-radius: 10px;
-                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                "
-              >
-                <div class="card-body">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31804.29339862994!2d-76.61677993359375!3d2.4419057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e300419afade71b%3A0x124cd8da8f1cf68!2sPopay%C3%A1n%2C%20Cauca!5e0!3m2!1sen!2sco!4v1697390913287!5m2!1sen!2sco"
-                    width="100%"
-                    height="300"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  >
-                  </iframe>
+      <div class="location-container" id="location-section">
+        <div class="card-transparent">
+          <div class="content-wrapper">
+            <h3 class="location-title"><span>Ubicación</span></h3>
+            <div class="location-content">
+              <!-- Descripción -->
+              <div class="location-description">
+                <p class="location-paragraph">
+                  Se ubica en nuestro Campus <strong>Los Robles</strong>, contando
+                  con <b>8 hectáreas</b> de las 46 que posee la Institución y se
+                  sitúa en el flanco occidental de la Cordillera Central a
+                  <b>1850 m.s.n.m.</b> con una temperatura promedio de
+                  <strong>18 °C</strong>.
+                </p>
+                <p class="location-paragraph">
+                  El área corresponde a la zona de vida de
+                  <strong>Selva Subandina</strong> (Cuatrecasas, 1958), con
+                  coordenadas geográficas de <b>2°23’ Latitud norte</b> y
+                  <b>76°40’ longitud oeste</b> a una altura de
+                  <strong>1850 m.s.n.m.</strong>
+                </p>
+              </div>
+      
+              <!-- Mapa -->
+              <div class="location-map">
+                <div class="map-card">
+                  <div class="map-card-body">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31804.29339862994!2d-76.61677993359375!3d2.4419057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e300419afade71b%3A0x124cd8da8f1cf68!2sPopay%C3%A1n%2C%20Cauca!5e0!3m2!1sen!2sco!4v1697390913287!5m2!1sen!2sco"
+                      width="100%" height="300" style="border: 0;" allowfullscreen=""
+                      loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      
+      <!-- Estilos CSS -->
+      <style>
+        /* Estilo para la tarjeta con fondo degradado */
+        .card-transparent {
+          background: linear-gradient(135deg, #363b3f, #363b3f, #363b3f);
+          border-radius: 15px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+          padding: 2rem;
+          margin: 1rem auto;
+          max-width: 1200px;
+          color: #fff;
+        }
+      
+        .location-container {
+          display: flex;
+          justify-content: center;
+          padding: 2rem;
+        }
+      
+        .content-wrapper {
+          text-align: center;
+        }
+      
+        .location-title {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+          color: #fff;
+        }
+      
+        .location-content {
+          display: flex;
+          justify-content: space-between;
+          gap: 2rem;
+          flex-wrap: wrap;
+        }
+      
+        .location-description {
+          width: 48%;
+          text-align: justify;
+          color: #fff;
+          line-height: 1.6;
+        }
+      
+        .location-paragraph {
+          margin-bottom: 1.2rem;
+        }
+      
+        .location-map {
+          width: 48%;
+        }
+      
+        .map-card {
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+      
+        .map-card-body {
+          padding: 1rem;
+        }
+      
+        /* Hacer que se vea bien en dispositivos pequeños */
+        @media (max-width: 768px) {
+          .location-content {
+            flex-direction: column;
+          }
+      
+          .location-description, .location-map {
+            width: 100%;
+          }
+        }
+      </style>
+      
+      <!-- Script JS -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const buttons = document.querySelectorAll(".tab-button");
+          const contents = document.querySelectorAll(".tab-content");
+          const subButtons = document.querySelectorAll(".sub-tab-button");
+          const subContents = document.querySelectorAll(".sub-tab-content");
+        
+          buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+              buttons.forEach((btn) => btn.classList.remove("active"));
+              contents.forEach((content) => content.classList.remove("active"));
+        
+              button.classList.add("active");
+              document.getElementById(button.dataset.target).classList.add("active");
+            });
+          });
+        
+          subButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+              subButtons.forEach((btn) => btn.classList.remove("active"));
+              subContents.forEach((content) => content.classList.remove("active"));
+        
+              button.classList.add("active");
+              document.getElementById(button.dataset.target).classList.add("active");
+            });
+          });
+        });
+        
+      </script>
+      
 
         <div class="row">
           <div class="col-md-12 centered">
@@ -402,21 +502,126 @@
           </div>
         </div>
 
-        <div class="row" id="multimedia">
+        <div class="row" id="multimedia-section">
           <div class="col-md-12 centered pt-2">
-            <h3><span>Multimedia</span></h3>
-            <video width="640" height="360" controls autoplay>
-              <source src="images/video1.mp4" type="video/mp4" />
-            </video>
-            <p>
-              humanitatis per seacula quarta decima et quinta decima. Eodem modo
-              typi, qui nunc nobis videntur parum clari, fiant sollemnes in
-              futurum.
-            </p>
-            <!-- Card que contiene el mapa -->
+            <h3 class="section-title">Multimedia</h3>
+        
+            <div class="multimedia-tabs" role="tablist">
+              <button class="tab-button active" data-target="imagenes" role="tab" aria-selected="true">Imágenes</button>
+              <button class="tab-button" data-target="material" role="tab" aria-selected="false">Material Didáctico</button>
+              <button class="tab-button" data-target="podcasts" role="tab" aria-selected="false">Podcasts</button>
+              <button class="tab-button" data-target="publicaciones" role="tab" aria-selected="false">Publicaciones</button>
+              <button class="tab-button" data-target="videos" role="tab" aria-selected="false">Videos</button>
+            </div>
+        
+            <div class="multimedia-content">
+              <div class="tab-content active" id="imagenes">
+                <div class="subsection" id="fauna-section">
+                  <h4 class="subsection-title">Fauna</h4>
+                  <button class="sub-tab-button" data-target="anfibios-reptiles">Anfibios y Reptiles</button>
+                  <button class="sub-tab-button" data-target="aves">Aves</button>
+                  <button class="sub-tab-button" data-target="insectos">Insectos</button>
+                  <button class="sub-tab-button" data-target="mamiferos">Mamíferos</button>
+                  <div class="subsection-content">
+                    <div class="sub-tab-content" id="anfibios-reptiles">
+                      <div class="upload-box">
+                        <img src="multimedia/Imágenes/Fauna/Anfibios y reptiles/Deendropsophus columbianus.jpeg" alt="Deendropsophus columbianus" width="200">
+                      </div>
+                      <div class="upload-box">
+                        <img src="multimedia\Imágenes\Fauna\Anfibios y reptiles\Falsa coral L. micropholis.png" alt="Deendropsophus columbianus" width="200">
+                      </div>
+                      <div class="upload-box">
+                        <img src="multimedia\Imágenes\Fauna\Anfibios y reptiles\Falsa coral.jpeg" alt="Deendropsophus columbianus" width="200">
+                      </div>
+                    </div>
+                    <div class="sub-tab-content" id="aves">
+                      <div class="upload-box">
+                        <img src="multimedia\Imágenes\Fauna\Aves\Cyanocorax yncas (quinquina).jpeg" alt="Deendropsophus columbianus" width="200">
+                      </div>
+                      <div class="upload-box">
+                        <img src="multimedia\Imágenes\Fauna\Aves\Melanerpes formicivorus (carpintero de robledal).jpeg" alt="Deendropsophus columbianus" width="200">
+                      </div>
+                      <div class="upload-box">
+                        <img src="multimedia\Imágenes\Fauna\Aves\Piaya cayana (cuco ardilla).jpeg" alt="Deendropsophus columbianus" width="200">
+                      </div>
+                    </div>
+                    <div class="sub-tab-content" id="insectos">
+                      <div class="upload-box">Subir imagen Insectos</div>
+                      <div class="upload-box">Subir imagen Insectos</div>
+                      <div class="upload-box">Subir imagen Insectos</div>
+                    </div>
+                    <div class="sub-tab-content" id="mamiferos">
+                      <div class="upload-box">Subir imagen Mamíferos</div>
+                      <div class="upload-box">Subir imagen Mamíferos</div>
+                      <div class="upload-box">Subir imagen Mamíferos</div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="subsection" id="flora-section">
+                  <h4 class="subsection-title">Flora</h4>
+                  <button class="sub-tab-button" data-target="briofitos">Briófitos</button>
+                  <button class="sub-tab-button" data-target="plantas-vasculares">Plantas vasculares</button>
+                  <div class="subsection-content">
+                    <div class="sub-tab-content" id="briofitos">
+                      <div class="upload-box">Subir imagen Briófitos</div>
+                      <div class="upload-box">Subir imagen Briófitos</div>
+                      <div class="upload-box">Subir imagen Briófitos</div>
+                    </div>
+                    <div class="sub-tab-content" id="plantas-vasculares">
+                      <div class="upload-box">Subir imagen Plantas vasculares</div>
+                      <div class="upload-box">Subir imagen Plantas vasculares</div>
+                      <div class="upload-box">Subir imagen Plantas vasculares</div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="subsection" id="funga-section">
+                  <h4 class="subsection-title">Funga</h4>
+                  <button class="sub-tab-button" data-target="liquenes">Líquenes</button>
+                  <button class="sub-tab-button" data-target="macrohongos">Macrohongos</button>
+                  <div class="subsection-content">
+                    <div class="sub-tab-content" id="liquenes">
+                      <div class="upload-box">Subir imagen Líquenes</div>
+                      <div class="upload-box">Subir imagen Líquenes</div>
+                      <div class="upload-box">Subir imagen Líquenes</div>
+                    </div>
+                    <div class="sub-tab-content" id="macrohongos">
+                      <div class="upload-box">Subir imagen Macrohongos</div>
+                      <div class="upload-box">Subir imagen Macrohongos</div>
+                      <div class="upload-box">Subir imagen Macrohongos</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="tab-content" id="material">
+                <div class="upload-box">Subir material 1</div>
+                <div class="upload-box">Subir material 2</div>
+                <div class="upload-box">Subir material 3</div>
+              </div>
+        
+              <div class="tab-content" id="podcasts">
+                <div class="upload-box">Subir podcast 1</div>
+                <div class="upload-box">Subir podcast 2</div>
+                <div class="upload-box">Subir podcast 3</div>
+              </div>
+        
+              <div class="tab-content" id="publicaciones">
+                <div class="upload-box">Subir publicación 1</div>
+                <div class="upload-box">Subir publicación 2</div>
+                <div class="upload-box">Subir publicación 3</div>
+              </div>
+        
+              <div class="tab-content" id="videos">
+                <div class="upload-box">Subir video 1</div>
+                <div class="upload-box">Subir video 2</div>
+                <div class="upload-box">Subir video 3</div>
+              </div>
+            </div>
           </div>
         </div>
-
+        
         <div class="row" id="servicios">
           <div class="col-md-12 centered pt-2">
             <h3><span>Servicios</span></h3>
@@ -520,59 +725,7 @@
               </div>
               <button class="carousel-btn next" id="next-btn">›</button>
             </div>
-            
-            <style>
-            .carousel-container {
-              position: relative;
-              width: 90%;
-              margin: auto;
-              overflow: hidden;
-              background-color: #f9f9f9;
-              border: 2px solid #8f121a;
-              border-radius: 10px;
-              padding: 10px;
-            }
-            
-            .carousel {
-              display: flex;
-              transition: transform 0.4s ease-in-out;
-              will-change: transform;
-            }
-            
-            .carousel-item {
-              flex: 0 0 100%;
-              text-align: center;
-              padding: 20px;
-              box-sizing: border-box;
-            }
-            
-            .carousel-btn {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              background-color: #8f121a;
-              border: none;
-              color: white;
-              font-size: 24px;
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              cursor: pointer;
-              z-index: 10;
-            }
-            
-            .carousel-btn:hover {
-              background-color: #ce575f;
-            }
-            
-            #prev-btn {
-              left: 10px;
-            }
-            
-            #next-btn {
-              right: 10px;
-            }
-            </style>
+           
             
             <script>
             const carousel = document.getElementById('carousel-inner');
@@ -777,7 +930,109 @@
               botánico ha sido partícipe.
             </p>
 
-            
+            <!-- Image Grid -->
+<div class="image-grid-conservacion">
+  <div class="image-container">
+    <p class="image-titleC">Imagen 1</p>
+    <img
+      id="conservacion-image-1"
+      src="images\conservacion\img_cons01.JPG"
+      alt="Imagen 1"
+      data-description="Descripción de la Imagen 1"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleC">Imagen 2</p>
+    <img
+      id="conservacion-image-2"
+      src="images\conservacion\img_cons02.png"
+      alt="Imagen 2"
+      data-description="Descripción de la Imagen 2"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleC">Imagen 3</p>
+    <img
+      id="conservacion-image-3"
+      src="images\conservacion\img_cons04.JPG"
+      alt="Imagen 3"
+      data-description="Descripción de la Imagen 3"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleC">Imagen 3</p>
+    <img
+      id="conservacion-image-3"
+      src="images\conservacion\img_cons10.png"
+      alt="Imagen 3"
+      data-description="Descripción de la Imagen 3"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleC">Imagen 3</p>
+    <img
+      id="conservacion-image-3"
+      src="images\conservacion\img_cons06.JPG"
+      alt="Imagen 3"
+      data-description="Descripción de la Imagen 3"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleC">Imagen 3</p>
+    <img
+      id="conservacion-image-3"
+      src="images\conservacion\img_cons07.jpeg"
+      alt="Imagen 3"
+      data-description="Descripción de la Imagen 3"
+    />
+  </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="conservacion-image-modal" class="modal">
+  <div class="modal-content">
+    <p id="conservacion-modal-image-name" class="image-name"></p>
+    <img id="conservacion-modal-image" src="" alt="" />
+    <p id="conservacion-modal-text"></p>
+  </div>
+  <button id="conservacion-modal-close">Cerrar</button>
+</div>
+
+<!-- Modal Backdrop -->
+<div class="modal-backdrop"></div>
+
+<script>
+  const imagesConservacion = document.querySelectorAll(".image-grid-conservacion img");
+  const modalConservacion = document.getElementById("conservacion-image-modal");
+  const modalImageConservacion = document.getElementById("conservacion-modal-image");
+  const modalTextConservacion = document.getElementById("conservacion-modal-text");
+  const modalNameConservacion = document.getElementById("conservacion-modal-image-name");
+  const modalCloseConservacion = document.getElementById("conservacion-modal-close");
+  const backdropConservacion = document.querySelector(".modal-backdrop");
+
+  imagesConservacion.forEach((img) => {
+    img.addEventListener("click", () => {
+      modalImageConservacion.src = img.src;
+      modalTextConservacion.textContent = img.getAttribute("data-description");
+      const imageName = img.getAttribute("alt");
+      modalNameConservacion.textContent = imageName;
+      modalConservacion.style.display = "block";
+      backdropConservacion.style.display = "block";
+    });
+  });
+
+  modalCloseConservacion.addEventListener("click", () => {
+    modalConservacion.style.display = "none";
+    backdropConservacion.style.display = "none";
+  });
+
+  backdropConservacion.addEventListener("click", () => {
+    modalConservacion.style.display = "none";
+    backdropConservacion.style.display = "none";
+  });
+</script>
+
+
             <!-- Card que contiene el mapa -->
           </div>
         </div>
@@ -797,6 +1052,114 @@
               sombrío, estrategias de herramientas de manejo del paisaje con
               sistemas agroforestales.
             </p>
+
+            <!-- Image Grid -->
+<div class="image-grid-educacion">
+  <div class="image-container">
+    <p class="image-titleE">Imagen 1</p>
+    <img
+      id="educacion-image-1"
+      name="educacion-image-1"
+      src="images/investigacion/img_inv13.jpeg"
+      alt="Imagen 1"
+      data-description="Descripción de la Imagen 1"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleE">Imagen 2</p>
+    <img
+      id="educacion-image-2"
+      name="educacion-image-2"
+      src="images/investigacion/img_inv15.png"
+      alt="Imagen 2"
+      data-description="Descripción de la Imagen 2"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleE">Imagen 3</p>
+    <img
+      id="educacion-image-3"
+      name="educacion-image-3"
+      src="images/investigacion/img_inv14.JPG"
+      alt="Imagen 3"
+      data-description="Descripción de la Imagen 3"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleE">Imagen 4</p>
+    <img
+      id="educacion-image-4"
+      name="educacion-image-4"
+      src="images/investigacion/img_inv02.jpg"
+      alt="Imagen 4"
+      data-description="Descripción de la Imagen 4"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleE">Imagen 5</p>
+    <img
+      id="educacion-image-5"
+      name="educacion-image-5"
+      src="images/investigacion/img_inv06.jpg"
+      alt="Imagen 5"
+      data-description="Descripción de la Imagen 5"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-titleE">Imagen 6</p>
+    <img
+      id="educacion-image-6"
+      name="educacion-image-6"
+      src="images/investigacion/img_inv12.jpg"
+      alt="Imagen 6"
+      data-description="Descripción de la Imagen 6"
+    />
+  </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="educacion-image-modal" class="modal">
+  <div class="modal-content">
+    <p id="educacion-modal-image-name" class="image-name"></p>
+    <img id="educacion-modal-image" src="" alt="" />
+    <p id="educacion-modal-text"></p>
+  </div>
+  <button id="educacion-modal-close">Cerrar</button>
+</div>
+
+<!-- Modal Backdrop -->
+<div class="modal-backdrop"></div>
+
+<script>
+  const images = document.querySelectorAll(".image-grid-educacion img");
+  const modal = document.getElementById("educacion-image-modal");
+  const modalImage = document.getElementById("educacion-modal-image");
+  const modalText = document.getElementById("educacion-modal-text");
+  const modalName = document.getElementById("educacion-modal-image-name");
+  const modalClose = document.getElementById("educacion-modal-close");
+  const backdrop = document.querySelector(".modal-backdrop");
+
+  images.forEach((img) => {
+    img.addEventListener("click", () => {
+      modalImage.src = img.src;
+      modalText.textContent = img.getAttribute("data-description"); // Usa el atributo data-description
+      const imageName = img.getAttribute("alt"); // Obtén el nombre de la imagen desde el atributo alt
+      modalName.textContent = imageName; // Muestra el nombre en el modal
+      modal.style.display = "block";
+      backdrop.style.display = "block";
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+    backdrop.style.display = "none";
+  });
+
+  backdrop.addEventListener("click", () => {
+    modal.style.display = "none";
+    backdrop.style.display = "none";
+  });
+</script>
 
             <!-- Card que contiene el mapa -->
           </div>
@@ -928,7 +1291,7 @@
             </script>
           </div>
         </div>
-      </div>
+      
 
       <div class="row" id="apropiacion">
         <div class="col-md-12 centered pt-2">
@@ -956,8 +1319,111 @@
           que se convierten en una ventana para mostrar a los visitantes la
           importancia de la sostenibilidad en la producción.
         </p>
+
+        <!-- Image Grid - Apropiación -->
+<div class="image-grid-apropiacion">
+  <div class="image-container">
+    <p class="image-title-apropiacion">Imagen 1</p>
+    <img
+      id="apropiacion-image-1"
+      src="images\apropiacion\img_apr01.png"
+      alt="Imagen 1"
+      data-description="Descripción de la Imagen 1"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-title-apropiacion">Imagen 2</p>
+    <img
+      id="apropiacion-image-2"
+      src="images\apropiacion\img_apr02.jpeg"
+      alt="Imagen 2"
+      data-description="Descripción de la Imagen 2"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-title-apropiacion">Imagen 3</p>
+    <img
+      id="apropiacion-image-3"
+      src="images\apropiacion\img_apr03.jpg"
+      alt="Imagen 3"
+      data-description="Descripción de la Imagen 3"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-title-apropiacion">Imagen 4</p>
+    <img
+      id="apropiacion-image-4"
+      src="images\apropiacion\img_apr04.JPG"
+      alt="Imagen 4"
+      data-description="Descripción de la Imagen 4"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-title-apropiacion">Imagen 5</p>
+    <img
+      id="apropiacion-image-5"
+      src="images\apropiacion\img_apr03.jpg"
+      alt="Imagen 5"
+      data-description="Descripción de la Imagen 5"
+    />
+  </div>
+  <div class="image-container">
+    <p class="image-title-apropiacion">Imagen 6</p>
+    <img
+      id="apropiacion-image-6"
+      src="images\apropiacion\img_apr07.jpg"
+      alt="Imagen 6"
+      data-description="Descripción de la Imagen 6"
+    />
+  </div>
+</div>
+
+<!-- Modal Structure - Apropiación -->
+<div id="apropiacion-image-modal" class="modal">
+  <div class="modal-content">
+    <p id="apropiacion-modal-image-name" class="image-name"></p>
+    <img id="apropiacion-modal-image" src="" alt="" />
+    <p id="apropiacion-modal-text"></p>
+  </div>
+  <button id="apropiacion-modal-close">Cerrar</button>
+</div>
+
+<!-- Modal Backdrop - Apropiación -->
+<div class="modal-backdrop-apropiacion"></div>
+
+<script>
+  const imagesApropiacion = document.querySelectorAll(".image-grid-apropiacion img");
+  const modalApropiacion = document.getElementById("apropiacion-image-modal");
+  const modalImageApropiacion = document.getElementById("apropiacion-modal-image");
+  const modalTextApropiacion = document.getElementById("apropiacion-modal-text");
+  const modalNameApropiacion = document.getElementById("apropiacion-modal-image-name");
+  const modalCloseApropiacion = document.getElementById("apropiacion-modal-close");
+  const backdropApropiacion = document.querySelector(".modal-backdrop-apropiacion");
+
+  imagesApropiacion.forEach((img) => {
+    img.addEventListener("click", () => {
+      modalImageApropiacion.src = img.src;
+      modalTextApropiacion.textContent = img.getAttribute("data-description");
+      const imageName = img.getAttribute("alt");
+      modalNameApropiacion.textContent = imageName;
+      modalApropiacion.style.display = "block";
+      backdropApropiacion.style.display = "block";
+    });
+  });
+
+  modalCloseApropiacion.addEventListener("click", () => {
+    modalApropiacion.style.display = "none";
+    backdropApropiacion.style.display = "none";
+  });
+
+  backdropApropiacion.addEventListener("click", () => {
+    modalApropiacion.style.display = "none";
+    backdropApropiacion.style.display = "none";
+  });
+</script>
+
       </div>
-    </div>
+    
     <!-- Services end -->
 
     <!-- Rehome -->
@@ -1186,6 +1652,7 @@
         </div>
       </div>
     </div>
+    </div>
     <!-- Collecciones end -->
     <!-- Purchase -->
     <div class="purchase">
@@ -1199,6 +1666,7 @@
               >
             </p>
           </div>
+    
           <div class="col-md-3 purchase-button" id="conocenos">
             <button type="" class="btn btn-default btn-green">Conócenos</button>
           </div>
@@ -1209,70 +1677,139 @@
     <!-- Footer -->
     <div class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <h6>A little about us</h6>
-            <p>
-              <strong
-                >Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-                esse molestie consequat, vel illum dolore eu feugiat.</strong
-              >
-            </p>
-            <p>
-              Nam liber tempor cum soluta nobis eleifend option congue nihil
-              imperdiet doming id quod mazim placerat facer possim assum. Typi
-              non habent claritatem insitam.
-            </p>
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <h6><i class="fas fa-globe"></i> Institucional</h6>
+                <p>
+                    <strong><a href="https://www.fup.edu.co" target="_blank"><i class="fas fa-link"></i> www.fup.edu.co</a></strong>
+                </p>
+                <h6><i class="fas fa-book"></i> Programa de Ecología</h6>
+                <p>
+                    <strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:ecologia@fup.edu.co">ecologia@fup.edu.co</a>
+                </p>
+                <p>
+                    <strong><i class="fab fa-facebook"></i> Facebook:</strong> <a href="https://www.facebook.com/ecologiaFUP" target="_blank">Facultad de Ciencias Naturales Programa de Ecología FUP</a>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6><i class="fas fa-seedling"></i> Jardín Botánico de Popayán</h6>
+                <p>
+                    <strong><i class="fas fa-phone"></i> Teléfono:</strong> 31461413972
+                </p>
+                <p>
+                    <strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:jardinbotanico@fup.edu.co">jardinbotanico@fup.edu.co</a>
+                </p>
+                <p>
+                    <strong><i class="fab fa-facebook"></i> Facebook:</strong> <a href="https://www.facebook.com/JardinBotanicoPopayan" target="_blank">Jardín Botánico de Popayán</a>
+                </p>
+                <p>
+                    <strong><i class="fab fa-instagram"></i> Instagram:</strong> <a href="https://www.instagram.com/jardin_botanico_de_popayan?utm_source=qr&igsh=MXZvanJseXNlYTFsbA==" target="_blank">@jardin_botanico_de_popayan</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+              <img src="" alt="Logo Jardín Botánico de Popayán" class="img-fluid" style="max-width: 150px; height: auto;">
           </div>
-          <div class="col-md-3 blog">
-            <h6>Freshly blogged</h6>
-            <p class="title">
-              <a href="#" title="">Eodem modo typi, qui nunc nobis</a>
-            </p>
-            <p>
-              Claritas est etiam processus dynamicus, qui sequitur mutationem
-              consuetudium lectorum. Mirum est notare quam littera gothica, quam
-              nunc putamus parum claram.
-            </p>
-            <p><a href="#" title="">Read this post&hellip;</a></p>
-          </div>
-          <div class="col-md-3">
-            <h6>You may need this</h6>
-            <ul>
-              <li><a href="#" title="">Home</a></li>
-              <li><a href="#" title="">Contact us</a></li>
-              <li><a href="#" title="">FAQ</a></li>
-              <li><a href="#" title="">Terms &amp; conditions</a></li>
-              <li><a href="#" title="">Privacy policy</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 contact-info">
-            <h6>Keep in touch</h6>
-            <p>
-              Claritas est etiam processus dynamicus, qui sequitur mutationem
-              consuetudium lectorum.
-            </p>
-            <p class="social">
-              <a href="#" class="facebook"></a>
-              <a href="#" class="pinterest"></a>
-              <a href="#" class="twitter"></a>
-            </p>
-            <p class="c-details">
-              <span>Mail</span>
-              <a href="#" title="">jardinbotanico@fup.edu.co</a><br />
-              <span>Tel</span> 3146413972
-            </p>
-          </div>
+            <div class="col-md-6 text-center">
+              <img src="" alt="Logo Jardín Botánico de Popayán" class="img-fluid" style="max-width: 150px; height: auto;">
+          </div>          
         </div>
         <div class="row">
-          <div class="col-md-12 copyright">
-            <p>
-              &copy; Copyright 2024. All rights reserved.
-              <a href="#" title="PetCare wordpress theme">Jardin botánico</a>
-            </p>
+            <div class="col-md-12 copyright text-center">
+                <p>
+                    &copy; Copyright 2024. All rights reserved.
+                    <a href="#" title="Jardín Botánico"><i class="fas fa-leaf"></i> Jardín Botánico</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+        <div class="partners-section" id="partners-section">
+          <div class="partners-container" id="partners-container">
+            <div class="partners-row" id="partners-row">
+              <div class="partners-title" id="partners-title">
+                <h6>Aliados Estratégicos</h6>
+              </div>
+              
+              <div class="partners-logos" id="partners-logos">
+                <a href="" target="_blank">
+                  <img class="partner-logo" src="images/Logo JBP nuevo.png" alt="Ministerio de Ciencia, Tecnología e Innovación" />
+                </a>
+                <a href="" target="_blank">
+                  <img class="partner-logo" src="images/entrelagos.png" alt="Sistema General de Regalías" />
+                </a>
+                <a href="https://minciencias.gov.co" target="_blank">
+                  <img class="partner-logo" src="images/colombia_potencia.png" alt="Ministerio de Ciencia, Tecnología e Innovación" style="width: 200px;">
+              </a>
+              
+                <a href="https://sgr.gov.co" target="_blank">
+                  <img class="partner-logo" src="images/sgr.png" alt="Sistema General de Regalías" style="width: 180px;"/>
+                </a>
+                <a href="https://www.zoologicodecali.com.co" target="_blank">
+                  <img class="partner-logo" src="images/zoologico_cali.png" alt="Zoológico de Cali" />
+                </a>
+                <a href="#">
+                  <img class="partner-logo" src="images/fzc.jpeg" alt="Fundación Zoológica de Cali" />
+                </a>
+                <a href="#">
+                  <img class="partner-logo" src="images/caucris.png" alt="CauCris" />
+                </a>
+                <a href="#">
+                  <img class="partner-logo" src="images/lugar_ciencia.png" alt="Lugar a Ciencia" />
+                </a>
+                <a href="#">
+                  <img class="partner-logo" src="images/andoke.svg" alt="Andoke" />
+                </a>
+                <a href="#">
+                  <img class="partner-logo" src="images/parques_nacionales.jpg" alt="Andoke" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        
+        <style>
+          .partners-section {
+            background-color: white;
+            padding: 20px 0; /* Elimina padding lateral */
+            width: 100%;
+            box-sizing: border-box;
+          }
+          
+          .partners-container {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+          }
+          
+          .partners-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+          }
+          
+          .partner-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+          }
+          
+          /* Asegurar que el body y html no tengan márgenes extra */
+          html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+          }
+
+          /* {
+            border: 1px solid red !important;
+          }*/
+          
+          
+        </style>
+        
     </div>
     <!-- Footer end -->
 
